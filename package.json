@@ -2,9 +2,11 @@
   "name": "evn",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server" : "nodemon server.js --ignore 'client/'",
+    "client" : "npm run serve --prefix client",
+    "dev" : "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
@@ -13,5 +15,9 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.2",
+    "nodemon": "^2.0.7"
   }
 }
