@@ -5,6 +5,7 @@ const app = express()
 const cors = require('cors')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
+const reportsRoutes = require('./routes/api/reports')
 const PORT = 3000
 
 app.use(cors())
